@@ -1,0 +1,9 @@
+stage,shape_or_units,role
+Input,32x32 image,normalized digit image
+C1,6 feature maps,5x5 convolution
+S2,6 feature maps,subsampling / pooling
+C3,16 feature maps,partial convolution connections
+S4,16 feature maps,subsampling / pooling
+C5,120 units,convolution behaving like dense layer
+F6,84 units,fully connected layer
+Output,10 classes,digit class scores

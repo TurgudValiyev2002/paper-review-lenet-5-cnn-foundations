@@ -1,0 +1,5 @@
+idea,why_it_matters
+local receptive fields,nearby pixels form useful patterns
+weight sharing,same filter detects pattern across locations
+pooling,small shifts should not fully change prediction
+end-to-end learning,features are learned from data

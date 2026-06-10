@@ -42,16 +42,21 @@ LeNet-5 processes a 32x32 image through convolution and subsampling stages befor
 
 Input -> C1 convolution -> S2 subsampling -> C3 convolution -> S4 subsampling -> C5 -> F6 -> output classes.
 
+![LeNet-5 architecture flow](review_artifacts/lenet5_architecture_flow.png)
+
 The key design idea is locality. Early layers detect small stroke patterns, later layers combine them into more abstract digit representations, and the final layers classify the digit.
 
 ## Review Artifacts
 
 The repository includes:
 
-- `results/reviewed_papers.csv`
-- `results/lenet5_architecture_table.csv`
-- `results/paper_comparison.csv`
-- `results/lenet5_architecture_flow.png`
+- `review_artifacts/reviewed_papers.csv`
+- `review_artifacts/lenet5_architecture_table.csv`
+- `review_artifacts/paper_comparison.csv`
+- `review_artifacts/lenet5_architecture_flow.png`
+- `review_artifacts/neocognitron_concept.png`
+- `review_artifacts/zip_code_backprop_pipeline.png`
+- `review_artifacts/gpu_committee_pipeline.png`
 - `paper_notes/01_fukushima_neocognitron.md`
 - `paper_notes/02_lecun_zip_code_backprop.md`
 - `paper_notes/03_lecun_lenet5_document_recognition.md`

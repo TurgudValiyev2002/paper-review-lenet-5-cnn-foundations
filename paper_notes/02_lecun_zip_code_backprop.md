@@ -3,6 +3,10 @@
 Paper: Yann LeCun et al., "Backpropagation Applied to Handwritten Zip Code Recognition"  
 Link: https://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf
 
+![ZIP code backpropagation pipeline](../review_artifacts/zip_code_backprop_pipeline.png)
+
+The diagram shows the pipeline idea: handwritten image input, local receptive fields, shared weights, backpropagation training, and final digit classification.
+
 This paper moved neural vision closer to practical use. The authors studied handwritten ZIP code recognition and showed that backpropagation could train a constrained neural network for real image recognition. The important point is that the network was not a generic fully connected model. It used task structure: local receptive fields and shared parameters.
 
 The paper's contribution is the combination of learning and architectural bias. Instead of manually designing all features, the network learned useful representations from examples. At the same time, the architecture used assumptions about images: nearby pixels are related, and the same visual pattern can appear in different positions.

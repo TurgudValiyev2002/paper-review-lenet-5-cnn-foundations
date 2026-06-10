@@ -3,6 +3,10 @@
 Paper: Yann LeCun, Leon Bottou, Yoshua Bengio, Patrick Haffner, "Gradient-Based Learning Applied to Document Recognition"  
 Link: https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf
 
+![LeNet-5 architecture flow](../review_artifacts/lenet5_architecture_flow.png)
+
+The diagram shows LeNet-5 as a sequence of representation changes from image input to convolution, subsampling, dense representation, and output classes.
+
 This is the main LeNet-5 paper. The authors presented gradient-based learning for document recognition and described LeNet-5 as part of a full recognition system. The task was not an artificial toy problem only; the work connected neural networks to practical document and check reading.
 
 LeNet-5 takes a 32x32 input image and passes it through convolution, subsampling, more convolution, more subsampling, and final classification layers. This sequence is important because early layers detect local strokes, intermediate layers combine strokes into larger structures, and final layers make the class decision.

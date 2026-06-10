@@ -3,6 +3,10 @@
 Paper: Dan C. Ciresan, Ueli Meier, Luca M. Gambardella, Jurgen Schmidhuber, "Handwritten Digit Recognition with a Committee of Deep Neural Nets on GPUs"  
 Link: https://arxiv.org/abs/1103.4487
 
+![GPU committee pipeline](../review_artifacts/gpu_committee_pipeline.png)
+
+The diagram shows why the paper is different from LeNet-5: multiple GPU-trained models are combined as a committee before the final class decision.
+
 This paper is useful in a LeNet review because it shows what changed after the original CNN foundations: hardware, scale, and training capacity. The authors used GPU-trained deep neural networks and model committees to achieve very strong MNIST performance.
 
 The paper did not introduce the original CNN idea. Instead, it demonstrated that neural methods could reach higher accuracy when training became faster and models became larger. This matters historically because deep learning progress depended not only on algorithms, but also on compute.

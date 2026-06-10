@@ -16,9 +16,9 @@ Fukushima introduced a hierarchical model for shift-tolerant pattern recognition
 
 We extracted the main contribution, limitation, and lesson from each paper. We also rebuilt the LeNet-5 architecture as a flow diagram and saved comparison tables.
 
-## Results
+## Review Artifacts
 
-The repository contains a reviewed-papers table, a paper-comparison table, a LeNet-5 architecture table, and a real architecture flow diagram.
+The repository contains a reviewed-papers table, a paper-comparison table, a LeNet-5 architecture table, an architecture flow diagram, and one short note for each reviewed paper in `paper_notes/`.
 
 ## Interpretation
 

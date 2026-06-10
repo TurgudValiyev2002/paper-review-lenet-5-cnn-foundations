@@ -24,6 +24,8 @@ The aim is to understand the technical line from local receptive fields and hier
 | [Gradient-Based Learning Applied to Document Recognition](https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) | 1998 | LeNet-5 and a practical document recognition system. |
 | [Handwritten Digit Recognition with a Committee of Deep Neural Nets on GPUs](https://arxiv.org/abs/1103.4487) | 2011 | GPU scaling and deep model committees for stronger MNIST performance. |
 
+Short one-page notes for each paper are available in `paper_notes/`.
+
 ## What The Papers Did
 
 Fukushima's Neocognitron introduced the idea that visual recognition can be built as a hierarchy of local feature detectors and pooling-like stages. It was not LeNet, but it created an important conceptual foundation.
@@ -42,14 +44,18 @@ Input -> C1 convolution -> S2 subsampling -> C3 convolution -> S4 subsampling ->
 
 The key design idea is locality. Early layers detect small stroke patterns, later layers combine them into more abstract digit representations, and the final layers classify the digit.
 
-## Results Produced In This Repository
+## Review Artifacts
 
-The project creates:
+The repository includes:
 
 - `results/reviewed_papers.csv`
 - `results/lenet5_architecture_table.csv`
 - `results/paper_comparison.csv`
 - `results/lenet5_architecture_flow.png`
+- `paper_notes/01_fukushima_neocognitron.md`
+- `paper_notes/02_lecun_zip_code_backprop.md`
+- `paper_notes/03_lecun_lenet5_document_recognition.md`
+- `paper_notes/04_ciresan_gpu_digit_recognition.md`
 
 The architecture figure is a flow diagram because architecture is a sequence of transformations, not a single numeric measurement.
 

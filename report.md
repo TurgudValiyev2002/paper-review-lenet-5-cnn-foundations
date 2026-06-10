@@ -1,33 +1,29 @@
-# One-Page Report: Paper Review: LeNet-5 CNN Foundations
+# Report: LeNet-5 and CNN Foundations
 
 ## Motivation
 
-This lab is part of Dear Turgud's June 2026 AI Research Lab. It focuses on a small but meaningful research workflow.
+We reviewed LeNet-5 to understand the early design ideas behind convolutional neural networks.
 
-## Tools
+## Paper / Problem
 
-Tools: Python, pandas, matplotlib for review tables and figures.
+The project studies LeCun et al.'s work on gradient-based document recognition and handwritten digit classification.
 
-## Dataset, Paper, Or Problem
+## Method
 
-Dataset or paper: LeNet-5 and handwritten digit recognition.
-
-## Model(s) Or Method(s)
-
-Method: structured paper analysis rather than model training.
+We summarized the architecture as a table and extracted the main lessons: local receptive fields, weight sharing, pooling, and end-to-end learning.
 
 ## Hyperparameters
 
-Hyperparameters: not applicable because no model is trained.
+No training was done. This is a paper-review and explanation project.
 
 ## Results
 
-Results are architecture and lesson tables plus a stage figure.
+The repository contains an architecture table, a key-lessons table, and a figure showing the LeNet-5 stage order.
 
 ## Interpretation
 
-Interpretation: LeNet-5 matters because it encodes locality, weight sharing, and learned features.
+LeNet-5 is important because it connected image structure with neural network design. It used local filters and shared weights to learn visual patterns efficiently.
 
 ## Conclusion
 
-Conclusion: modern CNNs are deeper and larger, but their core logic is visible in LeNet-5.
+The paper is a foundation for modern computer vision. A deeper future review should include direct paper citations, limitations, and comparison with modern CNNs.

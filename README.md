@@ -1,44 +1,50 @@
-# Paper Review: LeNet-5 CNN Foundations
+# Paper Review: LeNet-5 and CNN Foundations
 
-## 1. Motivation
+## Motivation
 
-This is a paper-review lab for LeCun et al.'s LeNet-5 work on gradient-based document recognition. The motivation is to understand why convolution, pooling, and end-to-end learning became foundations of computer vision.
+LeNet-5 is one of the most important early convolutional neural networks. Studying it helps us understand why modern computer vision models use local filters, weight sharing, pooling, and end-to-end learning.
 
-## 2. Project Goal
+## Project Goal
 
-Build a small, reproducible AI research lab with clear outputs and honest limitations.
+We reviewed the main architectural ideas of LeNet-5 and summarized why they still matter.
 
-## 3. Dataset, Paper, Or Problem Description
+## Paper / Problem
 
-Dataset or paper: LeNet-5 and handwritten digit recognition.
+The reviewed work is LeCun et al.'s gradient-based document recognition work, where LeNet-5 was used for handwritten digit recognition.
 
-## 4. Tools
+## Tools
 
-Tools: Python, pandas, matplotlib for review tables and figures.
+Python, pandas, and matplotlib were used to create summary tables and a simple architecture-stage figure.
 
-## 5. Models Or Methods
+## Method
 
-Method: structured paper analysis rather than model training.
+We converted the paper's architecture into a structured table and extracted the main technical lessons.
 
-## 6. Hyperparameters When Relevant
+## Hyperparameters
 
-Hyperparameters: not applicable because no model is trained.
+No model was trained in this repository. The focus is paper review and architecture explanation.
 
-## 7. Results
+## Results
 
-Results are architecture and lesson tables plus a stage figure.
+The result files are:
 
-## 8. Interpretation Of Results
+- `results/lenet5_architecture_table.csv`
+- `results/lenet5_key_lessons.csv`
+- `results/lenet5_architecture_stages.png`
 
-Interpretation: LeNet-5 matters because it encodes locality, weight sharing, and learned features.
+The architecture summary covers input, convolution, subsampling, higher-level convolution, fully connected layers, and output classes.
 
-## 9. Conclusion
+## Interpretation
 
-Conclusion: modern CNNs are deeper and larger, but their core logic is visible in LeNet-5.
+LeNet-5 matters because it made image recognition learnable end to end. Instead of manually designing all features, the network learned useful filters from data. Pooling made the model less sensitive to small shifts, and weight sharing reduced the number of parameters.
 
-## 10. How To Run
+## Conclusion
+
+Modern CNNs are deeper and more powerful, but their basic logic is already visible in LeNet-5. This paper is worth studying because it explains the foundation, not only the final accuracy.
+
+## How To Run
 
 ```bash
 pip install -r requirements.txt
-python 1_*.py
+python 1_lenet5_review_tables.py
 ```

@@ -2,45 +2,64 @@
 
 ## Motivation
 
-LeNet-5 is one of the most important early convolutional neural networks. Studying it helps us understand why modern computer vision models use local filters, weight sharing, pooling, and end-to-end learning.
+Convolutional neural networks are now standard in computer vision, but their ideas were built step by step. This review studies LeNet-5 in context: where CNN ideas came from, what LeNet-5 actually did, and why later deep learning systems were able to extend it.
 
 ## Project Goal
 
-We reviewed the main architectural ideas of LeNet-5 and summarized why they still matter.
+We reviewed four papers around the development of CNNs for handwritten recognition:
 
-## Paper / Problem
+1. Fukushima, 1980: Neocognitron.
+2. LeCun et al., 1989: backpropagation for handwritten ZIP code recognition.
+3. LeCun et al., 1998: LeNet-5 and document recognition.
+4. Ciresan et al., 2011: GPU-trained deep networks for MNIST.
 
-The reviewed work is LeCun et al.'s gradient-based document recognition work, where LeNet-5 was used for handwritten digit recognition.
+The aim is to understand the technical line from local receptive fields and hierarchy to trainable convolutional networks and later GPU-scaled neural systems.
 
-## Tools
+## Reviewed Papers
 
-Python, pandas, and matplotlib were used to create summary tables and a simple architecture-stage figure.
+| Paper | Year | What it contributed |
+|---|---:|---|
+| [Neocognitron](https://doi.org/10.1007/BF00344251) | 1980 | Hierarchical visual recognition with local feature extraction and shift tolerance. |
+| [Backpropagation Applied to Handwritten Zip Code Recognition](https://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf) | 1989 | Backpropagation applied to a constrained handwriting recognition network. |
+| [Gradient-Based Learning Applied to Document Recognition](https://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) | 1998 | LeNet-5 and a practical document recognition system. |
+| [Handwritten Digit Recognition with a Committee of Deep Neural Nets on GPUs](https://arxiv.org/abs/1103.4487) | 2011 | GPU scaling and deep model committees for stronger MNIST performance. |
 
-## Method
+## What The Papers Did
 
-We converted the paper's architecture into a structured table and extracted the main technical lessons.
+Fukushima's Neocognitron introduced the idea that visual recognition can be built as a hierarchy of local feature detectors and pooling-like stages. It was not LeNet, but it created an important conceptual foundation.
 
-## Hyperparameters
+LeCun et al. 1989 showed that backpropagation could train a constrained neural network for real handwritten ZIP code recognition. This moved the field from hand-designed features toward learned feature extraction.
 
-No model was trained in this repository. The focus is paper review and architecture explanation.
+LeCun et al. 1998 presented LeNet-5 as part of a full document recognition system. The model used convolution, subsampling, and dense layers to recognize handwritten digits and characters in practical settings.
 
-## Results
+Ciresan et al. 2011 showed how later hardware and larger neural systems pushed handwritten digit recognition further. This paper is useful because it shows that LeNet-5 was a foundation, not the final form of CNN progress.
 
-The result files are:
+## Architecture Discussion
 
+LeNet-5 processes a 32x32 image through convolution and subsampling stages before classification:
+
+Input -> C1 convolution -> S2 subsampling -> C3 convolution -> S4 subsampling -> C5 -> F6 -> output classes.
+
+The key design idea is locality. Early layers detect small stroke patterns, later layers combine them into more abstract digit representations, and the final layers classify the digit.
+
+## Results Produced In This Repository
+
+The project creates:
+
+- `results/reviewed_papers.csv`
 - `results/lenet5_architecture_table.csv`
-- `results/lenet5_key_lessons.csv`
-- `results/lenet5_architecture_stages.png`
+- `results/paper_comparison.csv`
+- `results/lenet5_architecture_flow.png`
 
-The architecture summary covers input, convolution, subsampling, higher-level convolution, fully connected layers, and output classes.
+The architecture figure is a flow diagram because architecture is a sequence of transformations, not a single numeric measurement.
 
 ## Interpretation
 
-LeNet-5 matters because it made image recognition learnable end to end. Instead of manually designing all features, the network learned useful filters from data. Pooling made the model less sensitive to small shifts, and weight sharing reduced the number of parameters.
+The main lesson from these papers is that CNNs combine three important ideas: local receptive fields, shared weights, and hierarchical feature composition. LeNet-5 is important because it made these ideas practical in an end-to-end trainable system.
 
 ## Conclusion
 
-Modern CNNs are deeper and more powerful, but their basic logic is already visible in LeNet-5. This paper is worth studying because it explains the foundation, not only the final accuracy.
+LeNet-5 should be understood as a bridge between early biologically inspired visual models and modern deep CNNs. Its scale is small compared with modern networks, but the design principles are still visible in computer vision today.
 
 ## How To Run
 

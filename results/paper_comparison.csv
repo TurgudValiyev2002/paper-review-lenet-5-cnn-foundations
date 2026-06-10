@@ -1,0 +1,5 @@
+work,contribution,limitation
+Neocognitron,hierarchical local feature extraction,not trained end to end by modern backprop
+LeCun 1989,backpropagation for handwritten ZIP codes,smaller and earlier than LeNet-5
+LeNet-5 1998,complete CNN-style document recognition system,small by modern standards
+Ciresan 2011,GPU scaling and model committees,less focused on architectural interpretability

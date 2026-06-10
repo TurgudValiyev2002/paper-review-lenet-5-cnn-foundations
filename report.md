@@ -2,28 +2,28 @@
 
 ## Motivation
 
-We reviewed LeNet-5 to understand the early design ideas behind convolutional neural networks.
+We reviewed LeNet-5 in context because CNNs did not appear from one paper alone. The goal was to understand the chain of ideas behind local receptive fields, shared weights, subsampling, backpropagation, and practical handwritten recognition.
 
-## Paper / Problem
+## Papers Reviewed
 
-The project studies LeCun et al.'s work on gradient-based document recognition and handwritten digit classification.
+We reviewed Fukushima's Neocognitron (1980), LeCun et al.'s handwritten ZIP code recognition paper (1989), LeCun et al.'s LeNet-5 document recognition paper (1998), and Ciresan et al.'s GPU-trained deep network paper for MNIST (2011).
+
+## What The Papers Did
+
+Fukushima introduced a hierarchical model for shift-tolerant pattern recognition. LeCun et al. 1989 applied backpropagation to handwritten ZIP code recognition. LeCun et al. 1998 presented LeNet-5 inside a practical document recognition system. Ciresan et al. 2011 showed how GPU training and model committees pushed handwritten digit recognition further.
 
 ## Method
 
-We summarized the architecture as a table and extracted the main lessons: local receptive fields, weight sharing, pooling, and end-to-end learning.
-
-## Hyperparameters
-
-No training was done. This is a paper-review and explanation project.
+We extracted the main contribution, limitation, and lesson from each paper. We also rebuilt the LeNet-5 architecture as a flow diagram and saved comparison tables.
 
 ## Results
 
-The repository contains an architecture table, a key-lessons table, and a figure showing the LeNet-5 stage order.
+The repository contains a reviewed-papers table, a paper-comparison table, a LeNet-5 architecture table, and a real architecture flow diagram.
 
 ## Interpretation
 
-LeNet-5 is important because it connected image structure with neural network design. It used local filters and shared weights to learn visual patterns efficiently.
+LeNet-5 matters because it joined several ideas into one trainable system: local filters, shared weights, subsampling, and dense classification. It was not just a model; it was part of a practical recognition pipeline.
 
 ## Conclusion
 
-The paper is a foundation for modern computer vision. A deeper future review should include direct paper citations, limitations, and comparison with modern CNNs.
+The most important lesson is that modern CNNs are larger, but their basic logic is already visible in LeNet-5. Understanding these papers makes later computer vision architectures easier to understand.

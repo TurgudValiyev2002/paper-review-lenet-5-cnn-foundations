@@ -22,6 +22,10 @@ We extracted the main contribution, limitation, and lesson from each paper. We a
 
 The repository contains a reviewed-papers table, a paper-comparison table, a LeNet-5 architecture table, an architecture flow diagram, and one short note for each reviewed paper in `paper_notes/`.
 
+## Critical Limitations
+
+The reviewed systems are mostly narrow handwritten-recognition systems. They do not prove broad natural-image understanding. LeNet-5 is historically important, but it is small, grayscale-focused, and built for constrained document inputs. MNIST-level success should not be confused with general computer vision success.
+
 ## Interpretation
 
 LeNet-5 matters because it joined several ideas into one trainable system: local filters, shared weights, subsampling, and dense classification. It was not just a model; it was part of a practical recognition pipeline.

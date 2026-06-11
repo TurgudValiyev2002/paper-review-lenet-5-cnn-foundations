@@ -64,6 +64,17 @@ The repository includes:
 
 The architecture figure is a flow diagram because architecture is a sequence of transformations, not a single numeric measurement.
 
+## Critical Limitations
+
+These papers are foundational, but they do not solve modern computer vision.
+
+- Neocognitron was conceptually important, but it did not provide the same scalable end-to-end supervised training recipe that later CNNs used.
+- The 1989 ZIP code system worked on a narrow recognition problem, so its success did not automatically transfer to broad natural-image understanding.
+- LeNet-5 was strong for document recognition, but it was small, grayscale-focused, and designed for constrained inputs rather than complex scenes.
+- The 2011 GPU committee improved MNIST performance, but committee models are expensive and MNIST is too simple to prove general visual intelligence.
+
+The main failure mode across this line of work is dataset narrowness. Handwritten digit recognition is useful historically, but it can make models look more general than they really are.
+
 ## Interpretation
 
 The main lesson from these papers is that CNNs combine three important ideas: local receptive fields, shared weights, and hierarchical feature composition. LeNet-5 is important because it made these ideas practical in an end-to-end trainable system.
